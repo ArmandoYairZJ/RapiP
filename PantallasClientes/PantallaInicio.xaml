@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RapiPirata.PantallasClientes.PantallaInicio"
+             Title="PantallaInicio">
+
+
+
+
+    <!-- Menu Lateral -->
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menú"  >
+
+            <ContentPage.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0" Color="DarkCyan" />
+                    <GradientStop Offset="1" Color="DarkGray" />
+                </LinearGradientBrush>
+            </ContentPage.Background>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20" >
+                <Button x:Name="Pedidos" Text="Pedidos"  TextColor="Black" CornerRadius="15"  />
+                <Button x:Name="Productos" Text="Productos " TextColor="Black" CornerRadius="15"  />
+                <Button x:Name="ConsultarPedidos" Text=" Consultar Pedidos "  TextColor="Black" CornerRadius="15" />
+                <Button x:Name="Todas" Text="Todas " TextColor="Black" CornerRadius="15"  />
+                <Button x:Name="Reportes" Text="Reportes " TextColor="Black" CornerRadius="15"  />
+                <Button x:Name="Ventas" Text="Ventas" TextColor="Black" CornerRadius="15"  />
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <!-- Define el contenido principal -->
+
+    <ContentPage>
+        <ContentPage.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Offset="0" Color="DarkCyan" />
+                <GradientStop Offset="1" Color="DarkGray" />
+            </LinearGradientBrush>
+        </ContentPage.Background>
+        <ContentPage.Content >
+            <StackLayout>
+
+
+                <Label Text="Bienvenido al RappiPirata " HorizontalOptions="Center" VerticalOptions="Center" FontSize="Title" TextColor="Black" />
+
+                <Label HeightRequest="100" BackgroundColor="Transparent"/>
+
+                <Frame  HorizontalOptions="Center" VerticalOptions="Center"  WidthRequest="600"  HeightRequest="600" CornerRadius="300"  HasShadow="True" BackgroundColor="Transparent" BorderColor="Transparent">
+                    <Image Source="repartidor.png" Aspect="AspectFill" />
+                </Frame>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+
+
+
+</FlyoutPage>

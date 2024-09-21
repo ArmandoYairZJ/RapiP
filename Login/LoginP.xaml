@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RapiPirata.Login.LoginP"
+             Title="LoginP">
+
+
+
+
+    <!--Colores de fondo-->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0" Color="DarkRed" />
+            <GradientStop Offset="1" Color="DarkBlue" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <!--Interfaz de la pantalla-->
+    <Grid RowDefinitions=".3*, .7*" >
+        <Image Aspect="Center" Source="galtma.png"/>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-30,-5,-2" CornerRadius="30,30,0,0" Fill="DarkRed"/>
+
+
+            <!--Titulo-->
+            <VerticalStackLayout Margin="30,0,30,0" Spacing="40">
+                <Label FontAttributes="Bold" FontFamily="bold" FontSize="Large"  HorizontalOptions="Center" Text=" Bienvenidos " TextColor="White"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+                <!--Entry Usuario-->
+                <StackLayout Orientation="Horizontal">
+                    <Frame ZIndex="1" HasShadow="True" BorderColor="White" HeightRequest="56" WidthRequest="56" CornerRadius="28">
+                        <Image Source="usuario.png" HeightRequest="20" WidthRequest="20"/>
+
+                    </Frame>
+                    <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White" HorizontalOptions="FillAndExpand">
+                        <Entry x:Name="eUS" VerticalOptions="Center" Placeholder="Usuario" Keyboard="Text" Margin="20,0,0,0" TextColor="Black"/>
+                    </Frame>
+                </StackLayout>
+
+                <!--Entry Contraseña-->
+                <StackLayout Orientation="Horizontal">
+                    <Frame ZIndex="1" HasShadow="True" BorderColor="White" HeightRequest="56" WidthRequest="56" CornerRadius="28">
+                        <Image Source="contrasena.png" HeightRequest="20" WidthRequest="20"/>
+
+                    </Frame>
+                    <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White" HorizontalOptions="FillAndExpand">
+                        <Entry x:Name="eConta" VerticalOptions="Center" Placeholder="Contraseña" IsPassword="True" Margin="20,0,0,0" TextColor="Black"/>
+                    </Frame>
+                </StackLayout>
+
+                <!--Boton entrar-->
+                <Button x:Name="btnEntrar"  WidthRequest="100" CornerRadius="20" Text="Iniciar Sesion" HorizontalOptions="Center" BackgroundColor="Black" TextColor="White" Clicked="btnEntrar_Clicked" />
+
+            </VerticalStackLayout>
+
+
+        </Grid>
+    </Grid>
+
+
+</ContentPage>

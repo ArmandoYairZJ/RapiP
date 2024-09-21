@@ -1,0 +1,59 @@
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RapiPirata.Panta.Inicio"
+             Title="Inicio">
+
+    <!-- Menu Lateral -->
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menú"  >
+            
+            <ContentPage.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0" Color="DarkRed" />
+                    <GradientStop Offset="1" Color="DarkBlue" />
+                </LinearGradientBrush>
+            </ContentPage.Background>
+            
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20" >
+                <Button x:Name="Registro" Text="Registrar Productos"  TextColor="Black" CornerRadius="15" Clicked="Registro_Clicked" />
+                <Button x:Name="Consultar" Text="Consultar Productos " TextColor="Black" CornerRadius="15" Clicked="Consultar_Clicked" />
+                <Button x:Name="ConsultarPedidos" Text=" Consultar Pedidos "  TextColor="Black" CornerRadius="15" Clicked="ConsultarPedidos_Clicked"/>
+                <Button x:Name="Todas" Text="Todas " TextColor="Black" CornerRadius="15" Clicked="Todas_Clicked" />
+                <Button x:Name="Reportes" Text="Reportes " TextColor="Black" CornerRadius="15"  Clicked="Reportes_Clicked"/>
+                <Button x:Name="Ventas" Text="Ventas" TextColor="Black" CornerRadius="15"  Clicked="Ventas_Clicked"/>
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <!-- Define el contenido principal -->
+             
+                <ContentPage>
+                    <ContentPage.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Offset="0" Color="DarkRed" />
+                            <GradientStop Offset="1" Color="DarkBlue" />
+                        </LinearGradientBrush>
+                    </ContentPage.Background>
+                    <ContentPage.Content >
+                        <StackLayout>
+        
+
+                <Label Text="Bienvenido al RappiPirata " HorizontalOptions="Center" VerticalOptions="Center" FontSize="Title"/>
+
+                <Label HeightRequest="100" BackgroundColor="Transparent"/>
+
+                <Frame  HorizontalOptions="Center" VerticalOptions="Center"  WidthRequest="600"  HeightRequest="600" CornerRadius="300"  HasShadow="True" BackgroundColor="Transparent" BorderColor="Transparent">
+                    <Image Source="repartidor.png" Aspect="AspectFill" />
+                </Frame>
+                        </StackLayout>
+                    </ContentPage.Content>
+                </ContentPage>
+          
+  
+
+    <!-- Se define el boton de abrir/cerrar  el menu-->
+    <FlyoutPage.ToolbarItems>
+        <ToolbarItem IconImageSource="hamburger_icon.png" Clicked="ToolbarItem_Clicked"/>
+    </FlyoutPage.ToolbarItems>
+
+</FlyoutPage>
